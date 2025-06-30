@@ -1,5 +1,9 @@
 // import logo from "../app/assets/k.png";
+
+import Link from "next/dist/client/link";
 import Button from "./button";
+import LinkComponent from "./LinkComponent";
+
 
 export default function header() {
   return (
@@ -16,8 +20,12 @@ export default function header() {
       </ul>
 
       <div className="flex items-center space-x-4">
-        <Button label="Sign In" type="outline" />
-        <Button label="Start for free" />
+
+        <LinkComponent label="Sign In" href="/login" type="outline" />
+        <LinkComponent label="Start for free" href="/signup" type="primary" />
+
+
+
       </div>
     </nav>
   );
