@@ -1,13 +1,10 @@
-// import logo from "../app/assets/k.png";
-import Link from "next/dist/client/link";
-import Button from "./button";
+import Image from "next/image";
 import LinkComponent from "./LinkComponent";
-
 export default function header() {
   return (
     <nav className="flex items-center justify-between py-4 px-8  max-w-[1200px] mx-auto ">
       <div className="flex items-center space-x-2">
-        {/* <img src={logo} alt="Kreatorpay" className="w-8 h-8" /> */}
+        <Image src="/assets/k.png" alt="Kreatorpay" className="w-8 h-8" width={1000} height={1000} />
         <span className="font-bold text-lg">kreatorpay</span>
       </div>
 

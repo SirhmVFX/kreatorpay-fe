@@ -1,7 +1,4 @@
 import { BadgePoundSterling } from "lucide-react";
-import Button from "./button";
-// import bgImage from "../assets/portfolio-bg.png";    
-
 export default function featuresSection() {
   const features = [
     {
@@ -9,19 +6,16 @@ export default function featuresSection() {
       title: "Enhance Budget Precision",
       description:
         "Kreatorpay helps you track and manage expenses accurately while simplifying budgeting goals for creators.",
-      buttonText: "Get Started",
     },
     {
       title: "Streamlined Monitoring",
       description:
         "Easily monitor your earnings, expenses and financial insights in real-time with an intuitive dashboard.",
-      buttonText: "Start Monitoring",
     },
     {
       title: "AI Smart Advisor",
       description:
         "Leverage AI-driven recommendations to optimize your financial decisions and achieve better outcomes.",
-      buttonText: "Meet Your Advisor",
     },
   ];
 
