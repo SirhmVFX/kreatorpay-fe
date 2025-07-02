@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import logo from "../assets/k.png";
 
 export default function footer() {
   return (
@@ -9,7 +10,10 @@ export default function footer() {
         {/* Logo & Description */}
         <div>
           <div className="flex items-center space-x-2 mb-4">
+
             <Image src="/assets/k.png" alt="Kreatorpay" className="w-[40px] h-[40px] " width={1000} height={1000} />
+
+            {/* <img src={logo} alt="Kreatorpay" className="w-8 h-8" /> */}
             <span className="font-bold text-xl text-white">Kreatorpay</span>
           </div>
           <p className="text-sm text-gray-400">

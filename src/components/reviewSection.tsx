@@ -10,6 +10,9 @@ interface ArrowProps {
 
 // Custom Next Arrow
 function NextArrow(props: ArrowProps) {
+// Custom Next Arrow
+function NextArrow(props: any) {
+
   const { onClick } = props;
   return (
     <div
@@ -22,7 +25,11 @@ function NextArrow(props: ArrowProps) {
 }
 
 // Custom Prev Arrow
+
 function PrevArrow(props: ArrowProps) {
+
+function PrevArrow(props: any) {
+
   const { onClick } = props;
   return (
     <div
