@@ -3,6 +3,10 @@ import Link from "next/link";
 type ButtonProps = {
   label: string;
   type?: "primary" | "outline";
+  href: string
+};
+
+export default function LinkComponent({ label, type = "primary", href }: ButtonProps) {
   onClick?: () => void;
   href: string
 };

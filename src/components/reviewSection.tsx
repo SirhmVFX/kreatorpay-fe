@@ -3,8 +3,16 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// Types for custom arrow props
+interface ArrowProps {
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
+}
+
+// Custom Next Arrow
+function NextArrow(props: ArrowProps) {
 // Custom Next Arrow
 function NextArrow(props: any) {
+
   const { onClick } = props;
   return (
     <div
@@ -17,7 +25,11 @@ function NextArrow(props: any) {
 }
 
 // Custom Prev Arrow
+
+function PrevArrow(props: ArrowProps) {
+
 function PrevArrow(props: any) {
+
   const { onClick } = props;
   return (
     <div

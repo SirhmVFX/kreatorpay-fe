@@ -21,6 +21,7 @@ export default function featuresSection() {
       title: "AI Smart Advisor",
       description:
         "Leverage AI-driven recommendations to optimize your financial decisions and achieve better outcomes.",
+
       buttonText: "Meet Your Advisor",
     },
   ];
