@@ -1,10 +1,11 @@
-const ForgotPassword = () => {
-    return (
-        <div>
-            <h1>Forgot Password</h1>
-            <h1>this is the forgot password page</h1>
-        </div>
-    )
-}
+"use client";
 
-export default ForgotPassword
+import ForgotPassword from "@/components/ForgotPassword";
+
+export default function ForgotPasswordPage() {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-50">
+      <ForgotPassword />
+    </div>
+  );
+}
