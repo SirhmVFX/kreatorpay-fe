@@ -10,9 +10,12 @@ interface ArrowProps {
 
 // Custom Next Arrow
 function NextArrow(props: ArrowProps) {
+<<<<<<< HEAD
 // Custom Next Arrow
 function NextArrow(props: any) {
 
+=======
+>>>>>>> fixed-forgotpassword-page
   const { onClick } = props;
   return (
     <div
@@ -25,11 +28,15 @@ function NextArrow(props: any) {
 }
 
 // Custom Prev Arrow
+<<<<<<< HEAD
 
 function PrevArrow(props: ArrowProps) {
 
 function PrevArrow(props: any) {
 
+=======
+function PrevArrow(props: ArrowProps) {
+>>>>>>> fixed-forgotpassword-page
   const { onClick } = props;
   return (
     <div

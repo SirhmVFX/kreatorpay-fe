@@ -1,7 +1,10 @@
 import { BadgePoundSterling } from "lucide-react";
+<<<<<<< HEAD
 import Button from "./button";
 // import bgImage from "../assets/portfolio-bg.png";    
 
+=======
+>>>>>>> fixed-forgotpassword-page
 export default function featuresSection() {
   const features = [
     {
@@ -9,20 +12,29 @@ export default function featuresSection() {
       title: "Enhance Budget Precision",
       description:
         "Kreatorpay helps you track and manage expenses accurately while simplifying budgeting goals for creators.",
+<<<<<<< HEAD
       buttonText: "Get Started",
+=======
+>>>>>>> fixed-forgotpassword-page
     },
     {
       title: "Streamlined Monitoring",
       description:
         "Easily monitor your earnings, expenses and financial insights in real-time with an intuitive dashboard.",
+<<<<<<< HEAD
       buttonText: "Start Monitoring",
+=======
+>>>>>>> fixed-forgotpassword-page
     },
     {
       title: "AI Smart Advisor",
       description:
         "Leverage AI-driven recommendations to optimize your financial decisions and achieve better outcomes.",
+<<<<<<< HEAD
 
       buttonText: "Meet Your Advisor",
+=======
+>>>>>>> fixed-forgotpassword-page
     },
   ];
 
