@@ -13,10 +13,7 @@
     "next": "^15.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-=======
     "react-hot-toast": "^2.5.2",
->>>>>>> fixed-forgotpassword-page
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
   },
