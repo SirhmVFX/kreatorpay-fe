@@ -114,6 +114,8 @@ const VerifyEmail = () => {
                 onChange={(e) => handleChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
                 onPaste={handlePaste}
+                placeholder={`•`}
+                title={`Digit ${index + 1} of verification code`}
                 className="w-12 h-14 text-center border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
               />
             ))}
