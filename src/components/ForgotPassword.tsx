@@ -18,9 +18,7 @@ export default function ForgotPassword() {
     }
 
     setTimeout(() => {
-      router.push(
-        `/forgot-password/success?email=${encodeURIComponent(email)}`
-      );
+      router.push(`/reset-password?email=${encodeURIComponent(email)}`);
     }, 1000);
   };
 

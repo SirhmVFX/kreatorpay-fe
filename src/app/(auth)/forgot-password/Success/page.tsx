@@ -1,30 +1,78 @@
 "use client";
 
+import { useState, FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
-import Link from "next/link";
-import React from "react";
 
 export default function ForgotPasswordSuccess() {
   const searchParams = useSearchParams();
-  const email = searchParams.get("email");
+  const email = searchParams.get("email") || "";
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleReset = async (e: FormEvent) => {
+    e.preventDefault();
+
+    if (password !== confirmPassword) {
+      setMessage("Passwords do not match");
+      return;
+    }
+
+    setLoading(true);
+    setMessage("");
+
+    // Simulate success
+    setTimeout(() => {
+      setLoading(false);
+      setMessage("✅ Password reset successfully! (Mocked)");
+    }, 1000);
+  };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50">
-      <div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-lg text-center">
-        <h1 className="text-3xl font-bold text-purple-600 mb-4">
-          Check Your Email
-        </h1>
-        <p className="text-gray-700 mb-6">
-          We&apos;ve sent a confirmation link to{" "}
-          <span className="font-semibold">{email}</span>. Please check your
-          inbox and follow the instructions to reset your password.
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
+      <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+        <h1 className="text-xl font-bold mb-4">Forgot Password Success</h1>
+        <p className="mb-4 text-gray-600">
+          Reset password for{" "}
+          <span className="font-semibold">{email}</span>
         </p>
-        <Link
-          href="/login"
-          className="px-4 py-3 font-semibold text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition"
-        >
-          Back to Login
-        </Link>
+
+        <form onSubmit={handleReset} className="space-y-4">
+          <input
+            type="password"
+            placeholder="New Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full p-2 border rounded"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Confirm New Password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            className="w-full p-2 border rounded"
+            required
+          />
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded"
+          >
+            {loading ? "Resetting..." : "Reset Password"}
+          </button>
+        </form>
+
+        {message && (
+          <p
+            className={`mt-4 text-center text-sm ${
+              message.startsWith("✅") ? "text-green-600" : "text-red-500"
+            }`}
+          >
+            {message}
+          </p>
+        )}
       </div>
     </div>
   );

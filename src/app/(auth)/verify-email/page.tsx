@@ -95,7 +95,7 @@ const VerifyEmail = () => {
 
           <h1 className="text-2xl font-bold mb-2">Please check your email</h1>
           <p className="text-sm text-gray-600 mb-6">
-            We've sent a code to{' '}
+            We&#39;ve sent a code to{' '}
             <span className="font-medium">akpengbe1234@gmail.com</span>
           </p>
 
